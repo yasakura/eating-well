@@ -14,12 +14,12 @@ import thunk, {
 import { composeWithDevTools } from "redux-devtools-extension";
 import { AppState } from "./appState.interface";
 import { Dependencies } from "../dependencies";
-// import recipesRetrieval from "./reducers/recipesRetrievalReducer.reducer";
+import recipesRetrieval from "./reducers/recipesRetrievalReducer.reducer";
 
 export const configureStore = (dependencies: Partial<Dependencies>) =>
   createStore(
     combineReducers({
-      // recipesRetrieval,
+      recipesRetrieval,
     }),
     composeWithDevTools(
       applyMiddleware(
